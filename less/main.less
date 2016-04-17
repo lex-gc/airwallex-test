@@ -6,3 +6,47 @@ html {
   box-sizing: inherit;
 }
 
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	.main-wrapper {
+		width: 90%;
+		margin: 50px auto;
+		@media screen and (min-width: 768px){
+			width: 70%;
+		}
+
+		.search-box {
+			width: 60%;
+			float: right;
+			text-align: right;
+			margin-bottom: 20px;
+			.search-input {
+				display: inline-block;
+				text-align: left;
+			}
+		}
+
+		table {
+			border: solid 1px #A0A0A0;
+			width: 100%;
+			margin-top: 20px;
+			tr {
+				&.odd {
+					background-color: #f0f0f0;
+				}
+				th {
+					padding: 15px 10px;
+					text-align: left;
+				}
+				td {
+					padding: 10px;
+				}
+				.number {
+					text-align: right;
+				}
+			}
+	
+		}
+	}
+	
+}

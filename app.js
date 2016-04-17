@@ -8,13 +8,13 @@
 	$http.get('iphones.json')
 		.then(function(response){
 		    $scope.iphoneList = response.data;
-		    console.log ($scope.iphoneList);
 		});
 	$scope.search = function (row) {
-    return (angular.lowercase(row.name).indexOf(angular.lowercase($scope.query) || '') !== -1 ||
-    		angular.lowercase(row.type).indexOf(angular.lowercase($scope.query) || '') !== -1 ||
-			angular.lowercase(row.color).indexOf(angular.lowercase($scope.query) || '') !== -1 ||
-            angular.lowercase(row.capacity).indexOf(angular.lowercase($scope.query) || '') !== -1);
+		// Filter by name, type, color or capacity
+	    return (angular.lowercase(row.name).indexOf(angular.lowercase($scope.query) || '') !== -1 ||
+	    		angular.lowercase(row.type).indexOf(angular.lowercase($scope.query) || '') !== -1 ||
+				angular.lowercase(row.color).indexOf(angular.lowercase($scope.query) || '') !== -1 ||
+	            angular.lowercase(row.capacity).indexOf(angular.lowercase($scope.query) || '') !== -1);
     };
   }
 

@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
   require('jit-grunt')(grunt);
-
+    
   grunt.initConfig({
     less: {
       development: {
@@ -23,6 +23,7 @@ module.exports = function(grunt) {
         }
       }
     }
+
   });
 
   grunt.registerTask('default', ['less', 'watch']);
