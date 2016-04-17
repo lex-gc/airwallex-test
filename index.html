@@ -1,6 +1,6 @@
-<html>
+<html lang="en">
   <head>
-    <title></title>
+    <title>An iPhone list</title>
     <link rel="stylesheet" href="styles.css">
     <script src="angular.js"></script>
     <script src="app.js"></script>
@@ -8,7 +8,7 @@
   <body ng-app="iphoneApp" ng-controller="AppController">
     <h1>iPhone SE</h1>
 
-    <input name="search"/>
+    <input name="search" ng-model="query" />
 
     <table>
       <thead>
@@ -22,13 +22,13 @@
         </tr>
       <thead>
       <tbody>
-        <tr>
-          <td>ID</td>
-          <td>Name</td>
-          <td>Color</td>
-          <td>Type</td>
-          <td>Capacity</td>
-          <td>Price</td>
+        <tr ng-repeat="iphone in iphoneList | filter: search">
+          <td ng-bind="iphone.id">ID</td>
+          <td ng-bind="iphone.name">Name</td>
+          <td ng-bind="iphone.color">Color</td>
+          <td ng-bind="iphone.type">Type</td>
+          <td ng-bind="iphone.capacity">Capacity</td>
+          <td ng-bind="iphone.price">Price</td>
         </tr>
       </tbody>
     </table>
