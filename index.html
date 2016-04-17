@@ -1,36 +1,41 @@
-<html>
+<html lang="en">
   <head>
-    <title></title>
+    <title>An iPhone list</title>
     <link rel="stylesheet" href="styles.css">
     <script src="angular.js"></script>
     <script src="app.js"></script>
   </head>
   <body ng-app="iphoneApp" ng-controller="AppController">
-    <h1>iPhone SE</h1>
+  	<div class="main-wrapper">
+	    <h1>iPhone SE</h1>
+	    <div class="search-box">
+			<label for="search">Search</label>
+		    <input class="search-input" name="search" ng-model="query" />
+	    </div>
 
-    <input name="search"/>
-
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Color</th>
-          <th>Type</th>
-          <th>Capacity</th>
-          <th>Price</th>
-        </tr>
-      <thead>
-      <tbody>
-        <tr>
-          <td>ID</td>
-          <td>Name</td>
-          <td>Color</td>
-          <td>Type</td>
-          <td>Capacity</td>
-          <td>Price</td>
-        </tr>
-      </tbody>
-    </table>
+	
+	    <table>
+	      <thead>
+	        <tr>
+	          <th>ID</th>
+	          <th>Name</th>
+	          <th>Color</th>
+	          <th>Type</th>
+	          <th>Capacity</th>
+	          <th class="number">Price</th>
+	        </tr>
+	      <thead>
+	      <tbody>
+	        <tr ng-repeat="iphone in iphoneList | filter: search" ng-class-odd="'odd'">
+	          <td ng-bind="iphone.id">ID</td>
+	          <td ng-bind="iphone.name">Name</td>
+	          <td ng-bind="iphone.color">Color</td>
+	          <td ng-bind="iphone.type">Type</td>
+	          <td ng-bind="iphone.capacity">Capacity</td>
+	          <td class="number" ng-bind="iphone.price | currency: '$' : 2" >Price</td>
+	        </tr>
+	      </tbody>
+	    </table>
+	</div>
   </body>
 </html>
