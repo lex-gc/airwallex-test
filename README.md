@@ -1,3 +1,16 @@
+### My reply to the Airwallex Front End Developer Code Challenge
+
+Thank you for the chance to test my skills. To try my solution, please clone this repository into any web server folder and checkout the master branch. I've included the latest stylesheet version, so no need to run Grunt, but you totally can if something doesn't look quite right.
+
+Sorry if no unit tests were set, but it's a relatively new topic for me. I started testing some alternatives that would involve having Grunt running the tests as well, but I definitely need to learn more about Jasmine and PhantomJS before feeling comfortable with presenting a unit test solution.
+
+Cheers, and hope you find this one a good solution overall.
+
+
+Julio Gutierrez
+
+Original readme:
+
 ### Airwallex Front End Developer Code Challenge
 
 ##### Overview
@@ -25,3 +38,4 @@ The search much allow the user to search in `name`, `color`, `type` and `capacit
 * Add some unit tests in your chosen test runner (Jasmine, Mocha, etc)
 * Provide instructions for building, testing and running the Angular app
 * Any manipulation of the loaded list should be done using Javascript Array functions such as (map, filter, forEach)
+
